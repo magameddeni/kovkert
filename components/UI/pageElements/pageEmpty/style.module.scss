@@ -1,0 +1,10 @@
+.page-empty {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.full-height {
+    height: calc(100vh - 36px);
+  }
+}

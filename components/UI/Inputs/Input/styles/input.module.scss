@@ -1,0 +1,45 @@
+@import "../../../../../styles/colors";
+@import "../../../../../styles/typography";
+
+.input_block {
+  position: relative;
+  &__input {
+    resize: none;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    border: 0.75px solid $neutral_input_field;
+    padding: 16px 10px 16px;
+    background: 0;
+    @include miniTextButtonStyle;
+
+    ::-webkit-input-placeholder {
+      color: $neutral_gray2;
+    }
+    :-moz-placeholder {
+      color: $neutral_gray2;
+    }
+    ::-moz-placeholder {
+      color: $neutral_gray2;
+    }
+    :-ms-input-placeholder {
+      color: $neutral_gray2;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 10px;
+    color: $neutral_gray2;
+    @include miniTextButtonStyle;
+    transition: 0.1s;
+  }
+
+  &__label-active {
+    transition: 0.1s;
+    @include JostDigitsRegular400;
+    top: 12px;
+  }
+}

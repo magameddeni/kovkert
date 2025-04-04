@@ -1,0 +1,36 @@
+@import 'styles/media';
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  .filter-block {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: .3s background-color;
+
+    &:hover {
+      background: var(--color-light-grey);
+    }
+
+    i {
+      margin-right: 8px;
+    }
+  }
+
+  .search-input-wrapper {
+    width: 150px;
+
+    @media (min-width: $lg) {
+      width: 250px;
+    }
+  }
+}

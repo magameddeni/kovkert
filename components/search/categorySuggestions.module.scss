@@ -1,0 +1,22 @@
+.category-suggestions {
+  border-top: 1px solid var(--color-dark-grey);
+
+  &__item {
+    cursor: pointer;
+    padding: 12px 16px;
+
+    &:hover {
+      background: var(--color-light-grey);
+    }
+
+    &__title {
+      display: block;
+      color: var(--color-text-grey);
+    }
+
+    &__name {
+      display: block;
+      color: var(--color-primary-black);
+    }
+  }
+}

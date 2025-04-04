@@ -1,0 +1,22 @@
+.typing {
+  display: inline-flex;
+  align-items: center;
+  font-style: italic;
+
+  &__ellipsis {
+    display: flex;
+    width: 1rem;
+    overflow: hidden;
+
+    &::after {
+      content: "...";
+      animation: dot-animation 1s steps(4, start) infinite;
+    }
+  }
+}
+
+@keyframes dot-animation {
+  from {
+    transform: translateX(-1rem);
+  }
+}

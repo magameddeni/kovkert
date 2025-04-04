@@ -1,0 +1,198 @@
+@import "styles/media";
+
+.checkout-store-items {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 20px 16px;
+  @media (min-width: $sm) {
+    padding: 28px 24px;
+  }
+  @media (min-width: $lg) {
+    padding: 32px;
+  }
+
+  & + .checkout-store-items {
+    margin-top: 16px;
+  }
+
+  &__products {
+    margin-top: 16px;
+    gap: 8px;
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    @media (min-width: $lg) {
+      flex-wrap: wrap;
+    }
+
+    .product {
+      &__image {
+        height: 70px;
+        width: 80px;
+        padding: 4px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__delivery-types {
+    margin-top: 28px;
+    @media (min-width: $sm) {
+      margin-top: 32px;
+    }
+
+    .delivery-type-carts {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 16px;
+      border-radius: 8px;
+      @media (min-width: $sm) {
+        flex-direction: row;
+        border: 2px solid var(--color-dark-grey);
+      }
+
+      &__item {
+        margin: -2px;
+        border: 2px solid var(--color-dark-grey);
+        border-radius: 8px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: .3s border-color;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+
+        @media (min-width: $sm) {
+          width: calc(50% + 4px);
+          padding: 21px;
+          border: 2px solid transparent;
+
+          &:not(:last-child) {
+            margin-bottom: -2px;
+          }
+        }
+
+        &.active {
+          border-color: var(--color-primary-blue);
+        }
+
+        .date {
+          margin-top: 4px;
+
+          span {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.checkout-payment-methods {
+  padding: 24px 16px;
+  background: var(--color-white);
+  @media (min-width: $sm) {
+    padding: 24px;
+  }
+  @media (min-width: $lg) {
+    padding: 24px 32px;
+    border-radius: 8px;
+  }
+
+  &__methods {
+    margin-top: 16px;
+
+    .payment-method-cart {
+      padding: 19px 16px;
+      border-radius: 8px;
+      border: 2px solid var(--color-dark-grey);
+      cursor: pointer;
+      transition: .3s;
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+
+      &.active {
+        border: 2px solid var(--color-primary-blue);
+
+        i {
+          color: var(--color-primary-blue);
+        }
+
+        span {
+          color: var(--color-primary-blue);
+        }
+      }
+
+      i {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__prices {
+    margin-top: 16px;
+    padding-top: 8px;
+
+    & + .checkout-payment-methods__prices {
+      margin-top: 8px;
+    }
+
+    &.several-stores {
+      .item-price {
+        &:not(:first-child) {
+          padding-top: 4px;
+        }
+      }
+    }
+
+    .item-price {
+      display: flex;
+      justify-content: space-between;
+
+      &:not(:first-child) {
+        padding-top: 8px;
+      }
+    }
+
+    .store-name {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__final-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    border-top: 1px solid var(--color-dark-grey);
+    padding-top: 16px;
+  }
+
+  &__next-step {
+    margin-top: 16px;
+
+    .policy {
+      margin-top: 16px;
+
+      p, p > span, p > a > span {
+        font-size: 10px;
+        line-height: 12px;
+
+        span {
+          padding: 0 4px;
+        }
+      }
+    }
+  }
+}

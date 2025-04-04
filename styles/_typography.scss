@@ -1,0 +1,56 @@
+@mixin JostDigitsRegular400 {
+  // цифровой текст
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+}
+
+@mixin JostText400 {
+  //styleName: Текст;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+@mixin JostDescription400 {
+  //styleName: Описание;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+@mixin JostTextButtonNormal600 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@mixin JostAccentTextNormal500 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@mixin miniTextButtonStyle {
+  //styleName: Мини текстовая кнопка;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+}
+
+@mixin TextButton {
+  //styleName:  текстовая кнопка;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}

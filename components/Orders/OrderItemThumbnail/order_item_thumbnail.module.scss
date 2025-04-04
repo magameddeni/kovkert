@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &__image_block {
+    width: 80px;
+    height: 70px !important;
+    border-radius: 4px !important;
+    padding: 4px !important;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  &__price {
+    color: var(--color-primary-black);
+  }
+
+  &__qty {
+    color: var(--color-text-grey);
+  }
+}

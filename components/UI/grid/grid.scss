@@ -1,0 +1,312 @@
+@use 'sass:map';
+@import 'styles/media';
+
+$columns: 12 !default;
+$gap: 10px !default;
+$breakpoints: (
+        xs: (
+                'screen': 576px,
+                'container': 520px,
+                'gap': 16px
+        ),
+        sm: (
+                'screen': 768px,
+                'container': 704px,
+                'gap': 24px
+        ),
+        md: (
+                'screen': 992px,
+                'container': 920px,
+                'gap': 24px
+        ),
+        lg: (
+                'screen': 1200px,
+                'container': 1120px,
+                'gap': 32px
+        ),
+        xl: (
+                'screen': 1400px,
+                'container': 1320px,
+                'gap': 32px
+        ),
+        xxl: (
+                'screen': 1600px,
+                'container': 1368px,
+                'gap': 32px
+        )
+) !default;
+
+@mixin create-flex-cols($breakpoint: null) {
+  $infix: if($breakpoint == null, '', '-#{$breakpoint}');
+
+  @for $i from 1 through $columns {
+    .col#{$infix}-#{$i} {
+      flex: 0 0 calc(100% / #{$columns} * #{$i});
+      max-width: calc(100% / #{$columns} * #{$i});
+    }
+    .offset#{$infix}-#{$i} {
+      margin-left: calc(100% / #{$columns} * #{$i});
+    }
+    .order#{$infix}-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @media (min-width: map.get($width, 'screen')) {
+    .container {
+      max-width: map.get($width, 'container') + (map.get($width, 'gap') * 2);
+      padding-left: map.get($width, 'gap');
+      padding-right: map.get($width, 'gap');
+    }
+  }
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+.container-small {
+  max-width: 1042px;
+}
+
+.align-items {
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-center {
+    align-items: center;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+}
+
+.align-self {
+  &-start {
+    align-self: flex-start;
+  }
+
+  &-center {
+    align-self: center;
+  }
+
+  &-end {
+    align-self: flex-end;
+  }
+}
+
+.justify-content {
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-space-between {
+    justify-content: space-between;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap;
+  margin-right: -$gap;
+
+  &.small {
+    margin-left: -8px;
+    margin-right: -8px;
+
+    .col {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  &.row-16 {
+    margin-bottom: -16px;
+
+    & > * {
+      margin-bottom: 16px;
+    }
+  }
+
+  &.row-20 {
+    margin-bottom: -20px;
+
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.row-32 {
+    margin-bottom: -32px;
+
+    & > * {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+[class*='col-'],
+.col {
+  position: relative;
+  padding-left: $gap;
+  padding-right: $gap;
+  width: 100%;
+}
+
+.offset {
+  &-top-4 {
+    margin-top: 4px;
+  }
+
+  &-top-10 {
+    margin-top: 10px;
+  }
+
+  &-top-8 {
+    margin-top: 8px;
+  }
+
+  &-top-12 {
+    margin-top: 12px;
+  }
+
+  &-top-16 {
+    margin-top: 16px;
+  }
+
+  &-top-20 {
+    margin-top: 20px;
+  }
+
+  &-top-24 {
+    margin-top: 24px;
+  }
+
+  &-top-28 {
+    margin-top: 28px;
+  }
+
+  &-top-32 {
+    margin-top: 32px;
+  }
+
+  &-top-40 {
+    margin-top: 40px;
+  }
+
+  &-top-48 {
+    margin-top: 48px;
+  }
+
+  &-top-64 {
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: $sm) {
+  .offset-sm {
+    &-top-16 {
+      margin-top: 16px;
+    }
+
+    &-top-24 {
+      margin-top: 24px;
+    }
+
+    &-top-32 {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .offset-lg {
+    &-top-16 {
+      margin-top: 16px;
+    }
+
+    &-top-24 {
+      margin-top: 24px;
+    }
+
+    &-top-32 {
+      margin-top: 32px;
+    }
+
+    &-top-40 {
+      margin-top: 40px;
+    }
+  }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @media (min-width: map.get($width, 'screen')) {
+    @include create-flex-cols($breakpoint);
+  }
+}
+
+//grid cols
+
+//@mixin create-grid-cols($breakpoint: null) {
+//  $infix: if($breakpoint == null, '', '-#{$breakpoint}');
+//
+//  @for $i from 0 through $columns {
+//    @if $i == 0 {
+//      .col#{$infix}-offset-#{$i} {
+//        grid-column-start: auto;
+//      }
+//      .row#{$infix}-offset-#{$i} {
+//        grid-row-start: auto;
+//      }
+//      .col#{$infix}-order-#{$i} {
+//        order: 0;
+//      }
+//    } @else {
+//      .col#{$infix}-#{$i} {
+//        grid-column-end: span $i;
+//      }
+//      .col#{$infix}-offset-#{$i} {
+//        grid-column-start: $i + 1;
+//      }
+//      .row#{$infix}-#{$i} {
+//        grid-row-end: span $i;
+//      }
+//      .row#{$infix}-offset-#{$i} {
+//        grid-row-start: $i + 1;
+//      }
+//      .col#{$infix}-order-#{$i} {
+//        order: $i;
+//      }
+//    }
+//  }
+//}
+
+//@include create-grid-cols;
+//
+//@each $breakpoint, $width in $breakpoints {
+//  @media (min-width: map.get($width, 'screen')) {
+//    @include create-grid-cols($breakpoint);
+//  }
+//}

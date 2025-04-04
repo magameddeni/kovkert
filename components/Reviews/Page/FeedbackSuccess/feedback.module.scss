@@ -1,0 +1,20 @@
+@import 'styles/media';
+
+.feedback {
+  padding: 224px 0;
+  text-align: center;
+
+  &__buy_button {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: $sm) {
+    padding: 160px 0;
+  }
+
+  @media (max-width: $xs) {
+    padding: 120px 0;
+  }
+}

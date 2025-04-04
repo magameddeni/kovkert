@@ -1,0 +1,151 @@
+@import 'styles/media';
+
+
+.select {
+  display: flex;
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &.fluid {
+    width: 100%;
+
+    .select__control {
+      width: 100%;
+    }
+  }
+
+  &:not(&.with-suffix-icon) {
+    .select__indicators {
+      .select__dropdown-indicator {
+        display: none;
+      }
+    }
+  }
+
+  .select__indicators {
+    .select__indicator {
+      padding: 12px;
+
+      &-separator {
+        display: none;
+      }
+    }
+  }
+
+  .select__control {
+    min-height: 36px;
+    min-width: 180px;
+    background: var(--color-light-grey);
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-dark-grey);
+    }
+
+    &--is-focused {
+      box-shadow: none;
+    }
+
+    .select__value-container {
+      padding: 8px 12px;
+
+      .select__single-value {
+        margin: 0;
+        color: var(--color-primary-black)
+      }
+    }
+  }
+
+  .select__value-container {
+    .select__single-value {
+      cursor: pointer;
+    }
+  }
+
+  .select__menu {
+    z-index: 9;
+    border-radius: 8px;
+
+    &-list {
+      max-height: 230px;
+      padding: 8px;
+
+      .select__option {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 10px 12px;
+        background-color: var(--color-white);
+
+        &--is-selected {
+          color: var(--color-primary-black);
+          background: var(--color-light-grey)
+        }
+
+        &:focus,
+        &:hover,
+        &:active {
+          background: var(--color-light-grey-hover);
+        }
+      }
+    }
+  }
+}
+
+
+.view-secondary {
+  .select {
+    &.error {
+      .select__control {
+        border-color: var(--color-orange);
+      }
+    }
+
+    .select__control {
+      border-bottom: 2px solid var(--color-dark-grey);
+      border-radius: 0;
+      background: none;
+      padding-top: 22px;
+    }
+
+    .select__value-container {
+      padding: 6px 0;
+
+      .select__single-value {
+        cursor: pointer;
+      }
+    }
+
+    .select__indicators {
+      .select__dropdown-indicator {
+        padding: 0 0 16px;
+      }
+    }
+  }
+}
+
+.view-light {
+  .select {
+    .select__control {
+      min-height: auto;
+      background: none;
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    .select__value-container {
+      padding: 0;
+
+      .select__single-value {
+        @media (min-width: $lg) {
+          color: var(--color-primary-blue-hover);
+        }
+      }
+    }
+  }
+}

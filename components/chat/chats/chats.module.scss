@@ -1,0 +1,75 @@
+@import "styles/media";
+
+.chats {
+  .chat {
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    @media (max-width: $sm) {
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-dark-grey);
+      }
+    }
+
+    &.active,
+    &:hover {
+      background-color: var(--color-light-grey);
+    }
+
+    &__logo {
+      display: flex;
+      margin-right: 12px;
+
+      img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-right: 30px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .last-message {
+        height: 16px;
+      }
+    }
+
+    &__date {
+      margin-left: auto;
+      display: flex;
+      align-self: flex-start;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary-blue);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.empty-chats {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

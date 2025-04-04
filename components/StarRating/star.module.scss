@@ -1,0 +1,16 @@
+@import "../../styles/colors";
+
+.svg_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.star_icon {
+  display: flex;
+}
+.c_icon {
+  &:hover {
+    cursor: pointer;
+  }
+}

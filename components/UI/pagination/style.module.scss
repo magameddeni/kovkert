@@ -1,0 +1,64 @@
+@import "styles/media";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  &__buttons {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+
+    .button {
+      padding: 10px;
+      border: 2px solid transparent;
+      font-size: 16px;
+      line-height: 16px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: .3s border-color;
+      @media (min-width: $xs) {
+        width: 40px;
+        height: 40px;
+      }
+
+      &.active {
+        border-color: var(--color-primary-blue);
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+      }
+
+      &:not(&.disabled) {
+        &:hover {
+          border-color: var(--color-primary-blue-hover);
+
+          &.arrow {
+            color: var(--color-primary-black);
+          }
+        }
+      }
+    }
+
+    .arrow {
+      color: var(--color-text-grey);
+    }
+
+    .choice-page {
+      margin: 0 2px;
+      display: flex;
+
+      .button {
+        padding-top: 12px;
+      }
+    }
+  }
+}

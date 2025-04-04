@@ -1,0 +1,84 @@
+@import 'styles/media';
+
+.header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $lg) {
+    justify-content: flex-start;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  .rating-and-reviews {
+    .rating {
+      display: flex;
+      align-items: center;
+
+      &__text {
+        margin-left: 4px;
+        line-height: 14px;
+      }
+
+      i {
+        margin-bottom: 2px;
+      }
+    }
+
+    .reviews {
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .favorite-and-share {
+    gap: 24px;
+
+    .add-to-favorite {
+      padding-bottom: 2px;
+    }
+  }
+}
+
+
+.share {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+
+  &__link-copied {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background: #ffffff7a;
+    padding: 2px;
+    border-radius: 2px;
+    width: max-content;
+    transition: 0.3s ease;
+
+    &.dynamic {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+
+      &.active {
+        opacity: 1;
+        top: 30px;
+      }
+    }
+
+    span {
+      white-space: nowrap;
+    }
+
+    i + span {
+      margin-left: 8px;
+    }
+  }
+}

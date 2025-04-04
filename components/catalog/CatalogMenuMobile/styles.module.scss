@@ -1,0 +1,64 @@
+.container {
+  --offset: 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  overflow-y: auto;
+  background-color: var(--color-white);
+
+  &__header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__inner {
+    padding-left: var(--offset);
+    padding-right: var(--offset);
+    padding-bottom: 32px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-height: 40px;
+  }
+
+  &__left_col {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  &__back_btn,
+  &__close_btn {
+    background: none;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__back_btn {
+    left: var(--offset);
+  }
+
+  &__close_btn {
+    right: var(--offset);
+  }
+}

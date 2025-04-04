@@ -1,0 +1,81 @@
+@import 'styles/media';
+
+.pvz {
+  width: 100%;
+  display: grid;
+
+  &__map {
+    padding: 32px 20px 0;
+    aspect-ratio: 16 / 8;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__close {
+    margin: 20px 20px 0 0;
+    text-align: right;
+  }
+
+  &__shop_information {
+    display: grid;
+    row-gap: 16px;
+    margin: 24px 32px 40px;
+  }
+
+  &__address,
+  &__phone {
+    display: grid;
+    row-gap: 4px;
+  }
+
+  &__address_title,
+  &__phone_title {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color-text-grey);
+  }
+
+  &__address_fullname,
+  &__phone_number {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--color-primary-black);
+  }
+
+  &__mobile_close-btn {
+    display: none;
+  }
+
+  @media (max-width: $sm) {
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+    width: 100%;
+
+    &__map {
+      order: -1;
+      padding: 0;
+      height: 100%;
+    }
+
+    &__shop_information {
+      margin: 28px 24px;
+    }
+
+    &__mobile_close-btn {
+      margin-top: 24px;
+      display: block;
+    }
+  }
+
+  @media (max-width: $xs) {
+    grid-template-rows: 1fr auto;
+    &__shop_information {
+      margin: 20px 16px;
+    }
+  }
+}

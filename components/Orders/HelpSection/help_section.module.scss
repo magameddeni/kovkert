@@ -1,0 +1,27 @@
+.helper {
+  &__questions {
+    display: grid;
+    row-gap: 8px;
+    margin: 20px 0;
+  }
+
+  &__title {
+    font-size: 23px;
+    line-height: normal;
+  }
+
+  &__question {
+    text-align: start;
+  }
+
+  &__ask-question {
+    width: 100%;
+    background: var(--color-extra-light-blue);
+    color: var(--color-primary-blue);
+  }
+
+  &__ask-question:hover {
+    background: var(--color-extra-light-blue);
+    color: var(--color-primary-blue);
+  }
+}

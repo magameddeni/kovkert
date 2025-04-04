@@ -1,0 +1,39 @@
+.crumb {
+  width: auto;
+  display: flex;
+  background-color: var(--color-light-grey);
+  border-radius: 4px;
+  padding: 6px 8px;
+
+  &:hover {
+    .crumb__text {
+      color: var(--color-primary-blue-hover);
+    }
+  }
+
+  a {
+    display: flex;
+  }
+
+  &__text {
+    cursor: pointer;
+    background-color: var(--color-light-grey);
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    font-size: 10px !important;
+    padding-bottom: 2px;
+
+    &.left {
+      margin-right: 4px;
+    }
+
+    &.right {
+      margin-left: 4px;
+    }
+  }
+}

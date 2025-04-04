@@ -1,0 +1,14 @@
+@import "styles/media";
+
+.docs {
+  &__nav {
+    @media (min-width: $lg) {
+      max-width: 220px;
+      margin-right: 76px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+}

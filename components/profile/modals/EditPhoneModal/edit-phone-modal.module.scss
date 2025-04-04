@@ -1,0 +1,31 @@
+.edit-phone {
+  padding: 48px 40px 32px;
+
+  .text-description {
+    span {
+      display: flex;
+      align-items: center;
+
+      button {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .input {
+    height: 74px !important;
+  }
+
+  .timer-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 245px;
+    margin: 32px auto 0;
+
+    &__text {
+      span {
+        color: var(--color-primary-black);
+      }
+    }
+  }
+}

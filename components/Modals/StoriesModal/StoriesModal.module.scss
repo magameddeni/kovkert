@@ -1,0 +1,75 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    z-index: 1000000000;
+    left: 15px;
+    right: 15px;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__input {
+    max-height: 363px;
+    width: 100%;
+    height: 36px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: transparent;
+    z-index: 1000;
+    color: #fff;
+  }
+
+  svg {
+    width: 20px;
+  }
+
+  .avatar {
+    margin-right: 8px;
+    padding-top: 5px;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .arrowLeft {
+    margin-right: 20px;
+    margin-top: 5px;
+    border-radius: 50%;
+  }
+
+  .nick {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 3px;
+  }
+
+  .createdDate {
+    font-size: 12px;
+    line-height: 12px;
+    color: #999;
+    font-weight: 400;
+  }
+
+  .dropDown {
+    margin-left: auto;
+
+    path {
+      fill: #999;
+    }
+  }
+}

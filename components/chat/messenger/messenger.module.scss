@@ -1,0 +1,58 @@
+@import 'styles/media';
+
+.messenger {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border-bottom: 1px solid var(--color-dark-grey);
+    padding: 8px 16px;
+    top: 0;
+    background: var(--color-white);
+    z-index: 1;
+    @media (min-width: $sm) {
+      height: 48px;
+    }
+
+    .button-back {
+      margin-right: 20px;
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    .tooltip {
+      margin-left: auto;
+
+      &__content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .text {
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  &__header_participant {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}

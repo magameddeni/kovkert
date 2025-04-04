@@ -1,0 +1,12 @@
+.clear-button {
+  cursor: pointer;
+  transition: .2s ease;
+
+  &.margin-right {
+    margin-right: 16px;
+  }
+
+  &:hover {
+    color: var(--color-primary-black);
+  }
+}

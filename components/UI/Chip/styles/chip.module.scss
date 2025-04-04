@@ -1,0 +1,13 @@
+.chip {
+    background-color: var(--color-dark-grey);
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.chip__label {
+    margin-right: 8px;
+    font-size: 14px;
+    color: var(--font-secondary);
+}

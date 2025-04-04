@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  row-gap: 8px;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__footer {
+    margin-top: 12px;
+  }
+}

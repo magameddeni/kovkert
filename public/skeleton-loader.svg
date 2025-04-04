@@ -1,0 +1,4 @@
+﻿<svg width="100%" height="100%" fill="#f7f8fc" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#f7f8fc"/>
+    <animate attributeName='opacity' calcMode='spline' dur='3' values='1;0;1;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='-.4' />
+</svg>

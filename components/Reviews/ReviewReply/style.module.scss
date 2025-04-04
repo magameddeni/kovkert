@@ -1,0 +1,41 @@
+.reply {
+  display: grid;
+  grid-template-columns: 16px auto 1fr;
+  width: 100%;
+
+  &__answer {
+    margin-top: 8px;
+  }
+
+  &__shop_avatar {
+    padding-left: 12px;
+  }
+
+  &__content {
+    padding-left: 16px;
+    width: 100%;
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 35px 35px;
+    justify-content: end;
+    column-gap: 24px;
+  }
+
+  &__footer_item {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    color: var(--color-dark-grey-hover);
+    cursor: pointer;
+  }
+
+  &__footer_like-active {
+    color: var(--color-primary-black);
+  }
+
+  &__footer_dislike-active {
+    color: var(--color-extra-red);
+  }
+}

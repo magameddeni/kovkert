@@ -1,0 +1,43 @@
+@import 'styles/media';
+
+.shop {
+  border: 1px solid var(--color-dark-grey);
+  border-radius: 8px;
+  padding: 16px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__link {
+    background-color: var(--color-light-grey);
+    border-radius: 30px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    line-height: 16px;
+    margin-top: 8px;
+    opacity: 1;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-dark-grey);
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import 'styles/media';
+
+
+.connect-affiliate-program-modal {
+  max-width: 490px !important;
+}
+
+.connect-affiliate-program {
+  padding: 32px 16px 0;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $sm) {
+    padding: 48px 32px 8px;
+    gap: 40px;
+  }
+
+  &__title {
+    @media (min-width: $sm) {
+      font-size: 27px !important;
+      line-height: 28px !important;
+    }
+  }
+
+  &__content {
+    .main-info {
+      display: flex;
+      gap: 16px;
+
+      &__image {
+        width: 60px;
+        min-width: 60px;
+        height: 54px;
+        @media (min-width: $sm) {
+          width: 106px;
+          min-width: 106px;
+          height: 94px;
+        }
+      }
+
+      &__text {
+        padding: 4px 0;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        .product-title {
+          @media (max-width: $sm) {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+
+    .discount-mobile {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+
+      .discount-percentage {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+
+    .change-discount {
+      margin-top: 16px;
+      @media (min-width: $sm) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  .button-connect {
+    padding: 10px 12px;
+  }
+}

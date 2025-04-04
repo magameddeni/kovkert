@@ -1,0 +1,34 @@
+@import 'styles/media';
+
+.error {
+  max-width: 450px;
+  padding: 66px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $sm) {
+    padding: 107px 0;
+  }
+  @media (min-width: $lg) {
+    padding: 153px 0;
+  }
+
+  &__title {
+    color: var(--color-dark-grey-hover);
+    line-height: 61.68px;
+    font-size: 60px;
+    @media (min-width: $sm) {
+      line-height: 82.24px;
+      font-size: 80px;
+    }
+  }
+
+  &__text {
+    width: 253px;
+    margin-top: 12px;
+    @media (min-width: $lg) {
+      width: auto;
+    }
+  }
+}

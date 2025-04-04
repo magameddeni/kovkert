@@ -1,0 +1,43 @@
+:root {
+  color-scheme: only light;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'ObjectSans', sans-serif;
+  font-size: 14px;
+}
+
+img {
+  pointer-events: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-primary-black);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  scroll-width: thin;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

@@ -1,0 +1,33 @@
+@import "styles/media";
+
+.search-chat {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  height: 56px;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-bottom: 1px solid var(--color-dark-grey);
+  position: sticky;
+  top: 0;
+  background: var(--color-white);
+  z-index: 1;
+  @media (min-width: $sm) {
+    padding: 0 6px;
+    height: 48px;
+  }
+
+  &__icon {
+    margin-right: 16px;
+    cursor: pointer;
+    @media (min-width: $sm) {
+      margin-left: 10px;
+    }
+  }
+
+  &__input {
+    @media (max-width: $sm) {
+      border: 1px solid var(--color-dark-grey);
+    }
+  }
+}

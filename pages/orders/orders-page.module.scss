@@ -1,0 +1,138 @@
+@import 'styles/media';
+
+.orders {
+  &__content {
+    margin-top: 20px;
+    display: flex;
+    column-gap: 48px;
+    @media (max-width: $md) {
+      display: grid;
+      column-gap: 0;
+      row-gap: 48px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: $lg) {
+      margin-top: 24px;
+    }
+  }
+  &__container {
+    width: 100%;
+  }
+  &__orders {
+    display: grid;
+    gap: 20px;
+    flex-basis: 744px;
+  }
+
+  &__hepler {
+    flex-basis: 359px;
+  }
+}
+
+.order {
+  &__header {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    @media (min-width: $sm) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media (min-width: $lg) {
+      align-items: center;
+      gap: 96px;
+      flex-direction: row;
+    }
+
+    & > * {
+      @media (min-width: $lg) {
+        flex: 0 0 calc(50% - 48px);
+      }
+    }
+
+    .order-info {
+      &__number-and-status {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (min-width: $sm) {
+          flex-direction: row;
+        }
+        @media (min-width: $lg) {
+          margin-top: 24px;
+        }
+
+        .order-number {
+          margin-right: 12px;
+          margin-bottom: 8px;
+          @media (min-width: $sm) {
+            margin-bottom: 0;
+            font-size: 23px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      &__date-and-check {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+
+        .check-button {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .pay-button {
+      width: 100%;
+      @media (min-width: $sm) {
+        max-width: 213px;
+      }
+      @media (min-width: $lg) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__orders {
+    margin-top: 24px;
+    display: grid;
+    row-gap: 32px;
+  }
+
+  &__order {
+    padding: 0 0 32px;
+    display: grid;
+    border-bottom: 1px solid var(--color-dark-grey);
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 20px;
+    @media (min-width: $lg) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 96px;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &__order_products {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .back-button {
+    padding: 6px 8px;
+    background: var(--color-light-grey);
+    color: var(--color-text-grey);
+
+    &:hover {
+      padding: 6px 8px;
+      background: var(--color-light-grey);
+      color: var(--color-text-grey);
+    }
+  }
+}

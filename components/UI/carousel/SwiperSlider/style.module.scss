@@ -1,0 +1,18 @@
+.slider {
+  min-width: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .arrow-view-product {
+    top: 27%;
+
+    &.arrow-prev {
+      left: -30px;
+    }
+
+    &.arrow-next {
+      right: -30px;
+    }
+  }
+}

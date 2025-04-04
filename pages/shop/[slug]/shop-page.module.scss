@@ -1,0 +1,24 @@
+@import 'styles/media';
+
+
+.page-subtitle {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  &__aff-button {
+    max-width: 100px;
+    @media (min-width: $xs) {
+      max-width: initial;
+    }
+  }
+}
+
+.shop-search-and-catalog {
+  margin-top: 16px;
+
+  button {
+    color: var(--color-primary-black);
+  }
+}

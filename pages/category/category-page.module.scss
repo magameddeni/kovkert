@@ -1,0 +1,11 @@
+@import 'styles/colors';
+@import 'styles/typography';
+@import 'styles/media';
+
+.category {
+  .category-item-wrapper {
+    @media (max-width: $xs) {
+      max-width: 50%;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "styles/media";
+
+.empty-page {
+  margin: 36px 0;
+  @media (min-width: $sm) {
+    margin: 160px 0;
+  }
+  @media (min-width: $lg) {
+    margin: 224px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 24px;
+    @media (min-width: $sm) {
+      font-size: 44px;
+      line-height: 45px;
+    }
+  }
+
+  &__description {
+    margin-top: 12px;
+    @media (min-width: $sm) {
+      margin-top: 24px;
+    }
+  }
+}

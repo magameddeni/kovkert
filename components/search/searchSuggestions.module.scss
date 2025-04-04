@@ -1,0 +1,19 @@
+.suggestions {
+  margin: 8px 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-light-grey);
+    }
+
+    strong {
+      color: var(--color-primary-black);
+    }
+  }
+}

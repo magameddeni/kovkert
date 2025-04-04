@@ -1,0 +1,72 @@
+.icon {
+  &.size-xxl {
+    font-size: 24px;
+  }
+
+  &.size-xl {
+    font-size: 20px;
+  }
+
+  &.size-lg {
+    font-size: 18px;
+  }
+
+  &.size-md {
+    font-size: 16px;
+  }
+
+  &.size-sm {
+    font-size: 12px;
+  }
+
+  &.size-xs {
+    font-size: 8px;
+  }
+}
+
+.color-primary {
+  color: var(--color-primary-black);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.color-gray {
+  color: var(--color-dark-grey-hover);
+}
+
+.color-gray-light {
+  color: var(--color-usual-grey);
+}
+
+.color-gray-dark {
+  color: var(--color-text-grey);
+}
+
+.color-blue {
+  color: var(--color-primary-blue);
+}
+
+.color-light-blue {
+  color: var(--color-light-blue);
+}
+
+.color-orange {
+  color: var(--color-orange);
+}
+
+.color-red {
+  color: var(--color-extra-red);
+}
+
+.hover {
+  cursor: pointer;
+  transition: 0.2s;
+
+  &-gray {
+    &:hover {
+      //color: $gray;
+    }
+  }
+}

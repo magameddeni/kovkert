@@ -1,0 +1,25 @@
+.product-price {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &.view-secondary {
+    .product-price__regular {
+      text-decoration-thickness: 1px;
+      margin-top: 0;
+    }
+  }
+
+  &__discount {
+    display: flex;
+
+    &.with-regular-price {
+      color: var(--color-extra-red);
+    }
+  }
+
+  &__regular {
+    margin-left: 8px;
+    margin-top: 3px;
+  }
+}

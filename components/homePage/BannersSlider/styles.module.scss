@@ -1,0 +1,44 @@
+@import 'styles/media';
+
+.banners {
+  padding-top: 16px;
+  margin: 0 -16px;
+  cursor: pointer;
+  @media (min-width: $xs) {
+    margin: 0 auto;
+  }
+  @media (min-width: $sm) and (max-width: $sm) {
+    margin: 0 -24px;
+  }
+
+  &__slide {
+    .image {
+      object-fit: cover;
+      max-width: 100%;
+      max-height: 180px;
+      display: flex;
+      @media (min-width: $xxs) {
+        max-height: 230px;
+      }
+      @media (min-width: $xs) {
+        max-height: 250px;
+      }
+      @media (min-width: $sm) {
+        max-height: 245px;
+      }
+      @media (min-width: $md) {
+        max-height: 260px;
+      }
+      @media (min-width: $lg) {
+        border-radius: 16px;
+        max-height: 330px;
+      }
+      @media (min-width: $xl) {
+        max-height: 385px;
+      }
+      @media (min-width: $xxl) {
+        max-height: 400px;
+      }
+    }
+  }
+}

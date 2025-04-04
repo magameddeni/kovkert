@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ru.kovkert.www.twa",
+      "sha256_cert_fingerprints": [
+        "23:E1:9B:AE:E5:19:FD:F0:F1:90:2A:8F:E7:56:76:54:B0:F6:E8:15:C5:AB:9A:79:29:F4:1D:54:A9:C4:D6:1A"
+      ]
+    }
+  }
+]

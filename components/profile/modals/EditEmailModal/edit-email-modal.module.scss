@@ -1,0 +1,16 @@
+.email {
+  padding: 48px 40px 32px;
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__offset-top-5 {
+    margin-top: 5px;
+  }
+
+  &__resend_time {
+    max-width: 245px;
+    margin: 32px auto 0;
+  }
+}

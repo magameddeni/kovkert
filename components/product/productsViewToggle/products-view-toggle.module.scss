@@ -1,0 +1,15 @@
+@import "styles/media";
+
+
+.products-view-handler {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}

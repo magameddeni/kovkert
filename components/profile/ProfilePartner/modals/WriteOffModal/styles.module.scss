@@ -1,0 +1,8 @@
+.WriteOffModal {
+  padding: 24px 24px 8px;
+  &__success {
+    padding: 64px 86px;
+    justify-content: center;
+    display: flex;
+  }
+}

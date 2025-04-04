@@ -1,0 +1,68 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "folderTemplates.structures": [
+    {
+      "name": "React Component",
+      "structure": [
+        {
+          "fileName": "<FTName | pascalcase>.tsx",
+          "template": "React FC"
+        },
+        {
+          "fileName": "styles.module.scss",
+          "template": "React TS styles"
+        },
+        {
+          "fileName": "index.ts",
+          "template": "React TS"
+        }
+      ]
+    },
+    {
+      "name": "React Page",
+      "structure": [
+        {
+          "fileName": "<FTName | pascalcase>.tsx",
+          "template": "React Page FC"
+        },
+        {
+          "fileName": "index.ts",
+          "template": "React TS"
+        }
+      ]
+    }
+  ],
+  "folderTemplates.fileTemplates": {
+    "React FC": [
+      "import React from 'react'",
+      "",
+      "import s from './styles.module.scss'",
+      "",
+      "interface <FTName | pascalcase>Props {}",
+      "",
+      "const <FTName | pascalcase>: React.FC<<FTName | pascalcase>Props> = () => (",
+      "  <div className={s.<FTName | pascalcase>}></div>",
+      ")",
+      "",
+      "export default <FTName | pascalcase>",
+      ""
+    ],
+    "React TS styles": [".<FTName | pascalcase>{", "", "}"],
+    "React TS": ["export { default as <FTName | pascalcase> } from './<FTName | pascalcase>'", ""],
+    "React Page FC": [
+      "interface <FTName | pascalcase>Props {}",
+      "",
+      "const <FTName | pascalcase>: React.FC<<FTName | pascalcase>Props> = () => {",
+      "  return <div></div>;",
+      "};",
+      "",
+      "export default <FTName | pascalcase>;",
+      ""
+    ]
+  },
+  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+}

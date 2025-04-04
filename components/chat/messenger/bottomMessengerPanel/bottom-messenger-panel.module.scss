@@ -1,0 +1,42 @@
+.bottom-messenger-panel {
+  border-top: 1px solid var(--color-dark-grey);
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  width: 100%;
+  padding: 8px 16px;
+  position: sticky;
+  bottom: 0;
+  background: var(--color-white);
+  z-index: 1;
+
+  &__attache {
+    cursor: pointer;
+  }
+
+  &__input {
+    height: 34px;
+  }
+
+  &__send {
+    background: var(--color-usual-grey);
+    max-width: 34px;
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background: var(--color-primary-blue);
+    }
+
+    i {
+      margin-left: 3px;
+    }
+  }
+}

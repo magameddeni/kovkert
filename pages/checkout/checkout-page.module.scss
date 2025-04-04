@@ -1,0 +1,84 @@
+@import "styles/media";
+
+
+.checkout-wrapper {
+  background: var(--color-light-grey);
+}
+
+
+.checkout-header {
+  margin-top: -8px;
+  margin-bottom: 32px;
+  background: var(--color-white);
+  padding: 12px 0;
+  @media (min-width: $lg) {
+    padding: 16px;
+  }
+
+  .logo {
+    margin-right: 32px;
+    display: flex;
+    position: relative;
+
+    img {
+      min-width: 103px;
+      max-height: 40px;
+      @media (min-width: $lg) {
+        min-width: 119px;
+        max-height: 46px;
+      }
+    }
+  }
+}
+
+
+.checkout {
+  &__content {
+    max-width: 100%;
+    @media (min-width: $lg) {
+      max-width: 600px;
+    }
+  }
+
+  &__payment {
+    flex: 1;
+    @media (max-width: $lg) {
+      margin-left: -8px;
+      margin-right: -8px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+
+.checkout-success {
+  background: var(--color-white);
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $sm) {
+    padding: 40px 96px;
+  }
+  @media (min-width: $xl) {
+    padding: 96px 294px;
+  }
+
+  &__image {
+    img {
+    width: 100px;
+    height: 100px;
+    }
+  }
+
+  &__order-number {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+}

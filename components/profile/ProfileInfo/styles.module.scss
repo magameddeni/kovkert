@@ -1,0 +1,80 @@
+@import "styles/media";
+
+.profile-info {
+  &__border-block {
+    border: 1px solid var(--color-dark-grey);
+    border-radius: 8px;
+    padding: 20px 16px;
+    @media (min-width: $sm) {
+      padding: 24px;
+    }
+    @media (min-width: $lg) {
+      padding: 32px;
+    }
+
+    & + .profile-info__border-block {
+      margin-top: 16px;
+    }
+
+    &.info-block {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+    }
+  }
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    @media (max-width: 991px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__label {
+    color: var(--color-text-grey);
+  }
+
+  &__value {
+    font-size: 16px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary-blue);
+    cursor: pointer;
+    padding: 0;
+  }
+}
+
+.email_status {
+  font-size: 12px;
+
+  &__col {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  svg {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.red {
+  color: var(--color-extra-red);
+}

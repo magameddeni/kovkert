@@ -1,0 +1,16 @@
+.page-header {
+  padding: 24px 24px 24px 32px;
+  background: var(--color-white);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 8px;
+  }
+}
+
+.with-border {
+  border-bottom: 1px solid var(--color-light-grey);
+  padding-bottom: 16px;
+}

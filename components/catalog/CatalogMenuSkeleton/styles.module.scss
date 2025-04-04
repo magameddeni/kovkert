@@ -1,0 +1,29 @@
+.items {
+  display: grid;
+  max-width: 97%;
+}
+
+.item {
+  --bg-color: var(--color-light-grey);
+  --radius: 4px;
+  display: flex;
+  padding: 10px 0;
+  box-sizing: content-box;
+  align-items: center;
+  column-gap: 12px;
+  height: 14px;
+}
+
+.icon {
+  background-color: var(--bg-color);
+  border-radius: var(--radius);
+  width: 20px;
+  height: 20px;
+}
+
+.name {
+  background-color: var(--bg-color);
+  border-radius: var(--radius);
+  flex-grow: 1;
+  height: 16px;
+}

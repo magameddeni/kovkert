@@ -1,0 +1,5 @@
+export const SITE_URL = 'https://www.kovkert.ru'
+export const STAGE_SITE_URL = 'https://staging.kovkert.ru'
+export const SELLER_URL = 'https://seller.kovkert.ru'
+export const DEFAULT_RUSSIAN_KOVKERT_KEYWORDS = 'ковкерт, ков керт, коверт, KOVKERT'
+export const DEFAULT_PRODUCT_PATH = '/default-product-image.svg'

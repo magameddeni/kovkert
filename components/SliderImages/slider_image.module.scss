@@ -1,0 +1,33 @@
+@import "styles/media";
+
+.slider {
+  min-width: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+
+  &__slide_image {
+    height: 299px;
+    width: 100%;
+  }
+
+  &__swiper_slider {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__add_favorite {
+    position: absolute;
+    z-index: 9;
+    right: 16px;
+    top: 16px;
+  }
+
+  @media (min-width: $xs) {
+    &__slide_image {
+      height: 368px;
+    }
+  }
+}

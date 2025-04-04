@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "ObjectSans";
+  src: local("Object Sans Regular"), local("Object-Sans-Regular"),
+    url("../public/assets/fonts/ObjectSans-Regular.woff2") format("woff2"),
+    url("../public/assets/fonts/ObjectSans-Regular.woff") format("woff"),
+    url("../public/assets/fonts/ObjectSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ObjectSansMedium";
+  src: url("../public/assets/fonts/ObjectSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}

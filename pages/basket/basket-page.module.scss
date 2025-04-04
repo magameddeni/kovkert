@@ -1,0 +1,127 @@
+@import 'styles/media';
+
+.basket {
+  &__title {
+    display: flex;
+    align-items: center;
+
+    .products-count {
+      margin-left: 8px;
+      @media (min-width: $lg) {
+        margin-left: 16px;
+      }
+
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    @media (min-width: $lg) {
+      padding-right: 22px;
+    }
+  }
+
+  &__next-step-button {
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--color-white);
+    z-index: 10;
+    @media (min-width: $lg) {
+      max-width: 372px;
+      position: static;
+      box-shadow: none;
+      background: none;
+    }
+
+    .next-step-button-block {
+      border-radius: 8px;
+      padding: 16px 0 35px;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $sm) {
+        flex-direction: row;
+        align-items: center;
+
+        & > * {
+          max-width: 50%;
+          flex: 0 0 50%;
+          padding: 0 14px;
+        }
+      }
+      @media (min-width: $lg) {
+        flex-direction: column;
+        align-items: initial;
+        padding: 16px;
+        background: var(--color-light-grey);
+        gap: initial;
+        width: auto;
+        & > * {
+          max-width: 100%;
+          flex: initial;
+          padding: 0;
+        }
+      }
+
+      .price-block {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+        @media (min-width: $sm) {
+          margin-bottom: 0;
+        }
+        @media (min-width: $lg) {
+          margin-bottom: 16px;
+        }
+
+        &__final {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+      }
+
+      .select-items-message {
+        order: -1;
+        width: 100%;
+        margin-bottom: 12px;
+        @media (min-width: $lg) {
+          margin-bottom: 0;
+          margin-top: 16px;
+          order: initial;
+        }
+      }
+    }
+  }
+
+  .row {
+    margin-top: 28px;
+    @media (min-width: $lg) {
+      margin-top: 32px;
+    }
+  }
+}
+
+
+.empty-page-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $sm - 1) {
+    padding-bottom: 44px;
+    margin-top: 20px;
+  }
+
+  &__button {
+    margin-top: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

@@ -1,0 +1,159 @@
+@import 'styles/media';
+
+.modal {
+  position: absolute;
+  outline: none;
+  margin: auto;
+  width: calc(100% - 32px);
+  height: auto;
+  border-radius: 8px;
+
+  &.sm {
+    max-width: 420px;
+  }
+
+  &.md {
+    max-width: 600px;
+  }
+
+  &.lg {
+    max-width: 1068px;
+  }
+
+  &.xl {
+    max-width: 1200px;
+  }
+
+  &.xxl {
+    max-width: 1364px;
+  }
+
+  &.full {
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: none;
+    height: 100%;
+
+    .content {
+      border-radius: 0;
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &.max-content {
+    width: max-content;
+
+    .close {
+      top: 0;
+      right: 0;
+
+      &.icon-close-right {
+        right: 0;
+      }
+    }
+  }
+
+  &.fix-close-icon {
+    .close {
+      position: fixed;
+    }
+  }
+
+  &.uptop-right-close-icon {
+    .content {
+      max-height: calc(100vh - 200px);
+    }
+  }
+
+  &.top-bottom-border {
+    .content {
+      border-top: 16px solid var(--color-white);
+      border-bottom: 16px solid var(--color-white);
+
+      & > * {
+        margin: -16px 0 0;
+      }
+    }
+  }
+
+  .close {
+    display: inline-flex;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    transition: 0.3s;
+    z-index: 10;
+    color: var(--color-text-grey);
+    font-weight: 600;
+    @media (min-width: $sm) {
+      top: 12px;
+    }
+
+    &.icon-close-uptop-right {
+      top: -52px;
+      right: 0;
+    }
+
+    &.icon-close-right {
+      right: 0;
+      @media (min-width: $sm) {
+        right: 12px;
+      }
+    }
+
+    &.icon-close-left {
+      left: 0;
+      @media (min-width: $sm) {
+        left: 12px;
+      }
+    }
+
+    &:hover {
+      color: var(--color-primary-black);
+    }
+  }
+
+  .content {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 32px);
+    @media (min-width: $lg) {
+      max-height: calc(100vh - 200px);
+    }
+
+    & > div {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #5c5c5c7d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  overflow: auto;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

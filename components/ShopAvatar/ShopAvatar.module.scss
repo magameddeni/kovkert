@@ -1,0 +1,31 @@
+@import "styles/media";
+
+.avatar {
+  margin-right: 12px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $lg) {
+    margin-right: 16px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.circle {
+  stroke: #39BE6E
+}

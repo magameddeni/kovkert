@@ -1,0 +1,13 @@
+.words_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 12px;
+    gap: 8px;
+    list-style: none;
+}
+
+.words_list__word {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

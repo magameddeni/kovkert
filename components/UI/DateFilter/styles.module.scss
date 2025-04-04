@@ -1,0 +1,121 @@
+@import 'styles/media';
+
+.filter-block-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .filter-block {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s background-color;
+
+    &.with-filter-data {
+      background: var(--color-extra-light-blue);
+      border-radius: 8px 0 0 8px;
+
+      &:hover {
+        background: var(--color-light-blue-hover);
+      }
+
+      i,
+      span {
+        color: var(--color-primary-blue);
+      }
+    }
+
+    &:hover,
+    &.dropdown-open {
+      background: var(--color-light-grey);
+    }
+
+    i {
+      margin-right: 8px;
+    }
+  }
+
+  .filter-clear {
+    cursor: pointer;
+    background: var(--color-extra-light-blue);
+    width: 32px;
+    height: 32px;
+    @media (max-width: $sm) {
+      width: 26px;
+      height: 26px;
+    }
+    border-left: 1px solid var(--color-light-blue-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 8px 8px 0;
+
+    &:hover {
+      background: var(--color-light-blue-hover);
+    }
+  }
+
+  .filter-dropdown {
+    opacity: 0;
+    position: absolute;
+    transition: 0.3s ease;
+    top: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    width: auto;
+    background: var(--color-white);
+    z-index: 2;
+    box-shadow: 0 2px 6px 0 var(--color-shadow);
+
+    &.active {
+      top: 36px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.base-filter {
+  .filter-dropdown {
+    width: 180px;
+    padding: 8px;
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 32px;
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 8px;
+      border-radius: 8px;
+
+      &:hover {
+        background: var(--color-light-grey);
+      }
+    }
+  }
+}
+
+.order-date {
+  .filter-dropdown {
+    width: 280px;
+    padding: 16px;
+  }
+}
+
+.order-search {
+  .search-input-wrapper {
+    width: 250px;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'styles/media';
+
+
+.shop-affiliate {
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__nav {
+    display: none;
+    @media (min-width: $lg) {
+      display: block;
+      max-width: 320px;
+      padding-right: 38px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    .product-item-wrapper {
+      @media (max-width: $xs) {
+        max-width: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "styles/colors";
+@import "styles/typography";
+
+.button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 16px;
+  position: relative;
+  font-size: 14px;
+  font-family: inherit;
+  transition: background-color 0.1s ease-in-out;
+
+  &__fill {
+    width: 100%;
+    display: block;
+  }
+
+  &__icon {
+    margin-left: 8px;
+  }
+
+  :disabled {
+    color: $neutral_gray2;
+    background: $neutral_background;
+  }
+}
+
+.large {
+}
+
+.medium {
+}
+
+.small {
+  @include miniTextButtonStyle;
+  padding: 8px 15.5px;
+}
+.transparent {
+  background-color: transparent;
+}
+
+.blue {
+  background-color: var(--color-primary-blue);
+  color: $neutral_full_white;
+
+  &:hover {
+    background-color: var(--color-primary-blue-hover);
+  }
+}
+
+.gray {
+  background: $neutral_background;
+  color: $neutral_black;
+}
+
+.green {
+  background: $green1;
+  color: $neutral_full_white;
+}
+
+.white {
+  background: $neutral_full_white;
+  color: $neutral_black;
+  border: 1px solid $neutral_input_field;
+}
+
+.color_blue {
+  color: var(--color-primary-blue);
+}
+
+.color_gray {
+  color: $neutral_input_field;
+}
+
+.color_white {
+  color: $neutral_full_white;
+}
+
+.font_style {
+  @include miniTextButtonStyle;
+}
+
+.loader {
+  position: absolute;
+  z-index: 100;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: inherit;
+  border-radius: inherit;
+
+  &__icon {
+    width: 30px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #0000);
+    background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+    background-size: calc(100% / 3) 100%;
+    animation: l7 1s infinite linear;
+  }
+}
+
+@keyframes l7 {
+  33% {
+    background-size: calc(100% / 3) 0%, calc(100% / 3) 100%, calc(100% / 3) 100%;
+  }
+  50% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 0%, calc(100% / 3) 100%;
+  }
+  66% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
+  }
+}
+
+.fluid {
+  width: 100%;
+}

@@ -1,0 +1,109 @@
+@import 'styles/media';
+
+.comment {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 8px;
+  }
+
+  &__user {
+    color: var(--color-primary-black);
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__review_stars {
+    height: 16px;
+  }
+
+  &__review {
+    display: flex;
+    align-items: center;
+  }
+
+  &__review_date {
+    margin-left: 8px;
+    color: var(--color-primary-black);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__images {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__image {
+    padding: 4px;
+    width: 56px;
+    height: 56px;
+    background: var(--color-dark-grey);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__advantages_text,
+  &__advantages_text,
+  &__disadvantages_text {
+    color: var(--color-primary-black);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__section_title {
+    color: var(--color-primary-black);
+    font-size: 14px;
+    font-family: var(--font-secondary);
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    @media (min-width: $lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__footer_item {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    color: var(--color-dark-grey-hover);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+  }
+
+  &__footer_like-active {
+    color: var(--color-primary-black);
+  }
+
+  &__footer_dislike-active {
+    color: var(--color-extra-red);
+  }
+}

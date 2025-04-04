@@ -1,0 +1,39 @@
+.DetailedTable {
+  padding: 0 12px;
+  position: relative;
+  &__header {
+    &-wrapper {
+      margin-top: 3px;
+      padding-bottom: 8px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    .image-cell-wrapper {
+      margin: -4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    //.table-tr {
+    //  & > div &:nth-child(4) {
+    //    color: red;
+    //  }
+    //}
+  }
+
+  &__footer {
+    padding: 36px 24px 28px;
+    display: flex;
+    align-items: center;
+
+    .limit {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+  }
+}

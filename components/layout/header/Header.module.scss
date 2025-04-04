@@ -1,0 +1,114 @@
+@import 'styles/media';
+
+.header {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 100;
+  transition: box-shadow 0.3s ease-in-out;
+  padding-bottom: 16px;
+
+  &--full {
+    height: 100vh;
+    max-height: 100%;
+  }
+
+  &--shadow {
+    box-shadow: 0px -2px 24px 0px rgba(40, 33, 65, 0.1);
+  }
+
+  &__top {
+    background-color: var(--color-light-grey);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    column-gap: 20px;
+
+    &--content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .right-top-links {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+    }
+
+    .header-top-link {
+      color: var(--color-primary-black);
+      font-size: 12px;
+      transition: color 0.1s ease-in-out;
+
+      &:hover {
+        color: var(--color-primary-blue);
+      }
+    }
+  }
+
+  &__middle {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    @media (min-width: $lg) {
+      align-items: end;
+    }
+
+    &--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+      }
+    }
+
+    .logo {
+      margin-right: 20px;
+      display: block;
+      position: relative;
+      min-width: 119px;
+      max-height: 46px;
+      @media (min-width: $lg) {
+        margin-right: 32px;
+      }
+    }
+
+    .menu {
+      display: flex;
+      column-gap: 16px;
+      margin-left: 20px;
+      @media (min-width: $lg) {
+        column-gap: 24px;
+        margin-left: 32px;
+      }
+      &__item {
+        &.active, &:hover {
+          i, span, .link {
+            color: var(--color-primary-blue);
+          }
+        }
+      }
+
+      .link {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        font-size: 10px;
+        align-items: center;
+        color: var(--color-primary-black);
+        transition: color 0.1s ease-in-out;
+        cursor: pointer;
+        @media (min-width: $lg) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
